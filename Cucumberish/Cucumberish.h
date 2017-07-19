@@ -28,6 +28,7 @@
 #import <XCTest/XCTest.h>
 #import "CCIStepsManager.h"
 #import "CCIBlockDefinitions.h"
+#import "CCIFeature.h"
 
 
 /**
@@ -96,6 +97,11 @@
  If Cucumberish is installed with Carthage, set the value of this property to be SRC_ROOT which is the preprocessor macro you defined in your build settings
  */
 @property (nonatomic, strong) NSString * testTargetSrcRoot;
+
+/**
+ After executing parserFeaturesInDirectory:fromBundle:includeTags:excludeTags: this array will contain all the parsed features.
+ */
+@property (nonatomic, readonly) NSArray<CCIFeature *> * features;
 
 /**
  Retuans a singleton instance of Cucumberish
